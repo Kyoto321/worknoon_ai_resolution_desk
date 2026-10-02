@@ -195,7 +195,7 @@ npm run dev
 
 | Variable | Required | Default | Description |
 |---|---|---|---|
-| `GEMINI_API_KEY` | ✅ Yes | — | Your Google Gemini API key |
+| `GEMINI_API_KEY` |  Yes | — | Your Google Gemini API key |
 | `GEMINI_MODEL` | No | `gemini-2.0-flash` | Gemini model to use |
 | `DATABASE_URL` | No | `sqlite:///./support_assistant.db` | Database connection string |
 | `CORS_ORIGINS` | No | `http://localhost:3000` | Allowed CORS origins |
@@ -283,11 +283,11 @@ pytest tests/ --cov=app --cov-report=term-missing
 
 ### Test Coverage Highlights
 
-- ✅ Policy engine: all hard-stop scenarios (final sale, expired window, large transaction, enterprise)
-- ✅ Customer API: lookup, search, 404 handling
-- ✅ Orders API: single order, customer orders, 404 handling
-- ✅ Support API: full pipeline, policy-specific scenarios, validation errors
-- ✅ History: pagination, detail retrieval
+-  Policy engine: all hard-stop scenarios (final sale, expired window, large transaction, enterprise)
+-  Customer API: lookup, search, 404 handling
+-  Orders API: single order, customer orders, 404 handling
+-  Support API: full pipeline, policy-specific scenarios, validation errors
+-  History: pagination, detail retrieval
 
 ---
 
@@ -297,16 +297,16 @@ The seed script creates **10 customers** and **10 orders** covering all scenario
 
 | Order | Scenario | Expected Decision |
 |---|---|---|
-| ORD001 | Within 30-day window, delivered | ✅ Approved |
-| ORD002 | 45 days old, outside window | ❌ Denied |
-| ORD003 | Final sale item | ❌ Denied |
-| ORD004 | Damaged product | ✅ Approved |
-| ORD005 | $1,249.99 large transaction | ⬆️ Escalated |
-| ORD006 | VIP customer, 45 days (within 60-day window) | ✅ Approved |
-| ORD007 | Overdue delivery complaint | 🔍 AI evaluates |
-| ORD008 | Enterprise customer | ⬆️ Escalated |
-| ORD009 | Wrong size, within window | ✅ Approved |
-| ORD010 | VIP + damaged + large transaction | ⬆️ Escalated |
+| ORD001 | Within 30-day window, delivered |  Approved |
+| ORD002 | 45 days old, outside window |  Denied |
+| ORD003 | Final sale item |  Denied |
+| ORD004 | Damaged product |  Approved |
+| ORD005 | $1,249.99 large transaction |  Escalated |
+| ORD006 | VIP customer, 45 days (within 60-day window) |  Approved |
+| ORD007 | Overdue delivery complaint |  AI evaluates |
+| ORD008 | Enterprise customer |  Escalated |
+| ORD009 | Wrong size, within window | Approved |
+| ORD010 | VIP + damaged + large transaction | Escalated |
 
 ---
 
