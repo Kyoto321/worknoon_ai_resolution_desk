@@ -33,19 +33,19 @@ The key architectural insight: **policy enforcement happens deterministically be
 ## Features
 
 ### Core
-- ✨ **Structured Policy Resolutions** — Gemini 2.0 Flash with structured JSON output
-- 📋 **Deterministic Rule Engine** — Hard-stop rules evaluated before AI, preventing hallucination
-- 🏷️ **Customer Tiers** — Standard, VIP (60-day window), Enterprise (auto-escalate)
-- 🔍 **Smart Autocomplete** — Search and resolve customer profiles by ID or name
-- 📜 **Audit Trail** — Every decision logged with full reasoning and policies applied
-- 📊 **Support History** — Paginated history with decision status
+-  **Structured Policy Resolutions** — Gemini 2.0 Flash with structured JSON output
+-  **Deterministic Rule Engine** — Hard-stop rules evaluated before AI, preventing hallucination
+-  **Customer Tiers** — Standard, VIP (60-day window), Enterprise (auto-escalate)
+-  **Smart Autocomplete** — Search and resolve customer profiles by ID or name
+-  **Audit Trail** — Every decision logged with full reasoning and policies applied
+-  **Support History** — Paginated history with decision status
 
 ### Technical
-- ⚡ **FastAPI** — Async, auto OpenAPI docs at `/docs`
-- 🗃️ **SQLite + SQLAlchemy ORM** — Zero-infra, WAL mode for performance
-- 🎨 **Next.js 15** — TypeScript, Tailwind CSS, App Router
-- 🔒 **Security** — CORS, input validation, sanitized error responses
-- 🧪 **Tests** — Unit tests for policy engine + integration tests for all endpoints
+-  **FastAPI** — Async, auto OpenAPI docs at `/docs`
+-  **SQLite + SQLAlchemy ORM** — Zero-infra, WAL mode for performance
+-  **Next.js 15** — TypeScript, Tailwind CSS, App Router
+-  **Security** — CORS, input validation, sanitized error responses
+-  **Tests** — Unit tests for policy engine + integration tests for all endpoints
 
 ---
 
